@@ -42,6 +42,7 @@ public class AddStaff {
 
             if (rowAffected > 0) {
                 System.out.println("\n" + sName + " Added Successfully!");
+                System.out.print(sName+"'s Staff id :: "+RetrieveStaff.indId(addCon,sName,sEmail, sPhone));
             } else {
                 System.out.println("\n" + sName + " Not Added!");
             }

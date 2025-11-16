@@ -82,4 +82,24 @@ public class RetrieveStaff {
     }
 
 
+    public static int indId(Connection addCon, String sName, String sEmail, long sPhone) {
+        try {
+            String indIdQuery = "SELECT * FROM techstaff WHERE tsName=? AND tsEmail=? AND tsPhone=?";
+            PreparedStatement indPs = addCon.prepareStatement(indIdQuery);
+            indPs.setString(1, sName);
+            indPs.setString(2, sEmail);
+            indPs.setLong(3, sPhone);
+
+            ResultSet rtvRs = indPs.executeQuery(); // execute the query
+
+            if (rtvRs.next()) {
+                return rtvRs.getInt("tid");
+            } else {
+                System.out.println("No Record Found!");
+            }
+        } catch (Exception e) {
+            System.out.println("Error :: " + e.getMessage());
+        }
+        return 0;
+    }
 }
