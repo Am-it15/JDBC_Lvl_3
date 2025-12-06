@@ -1624,19 +1624,6 @@ Connection con = DriverManager.getConnection(url, user, pass);
 
 ---
 
-**END OF COMPLETE PREPAREDSTATEMENT GUIDE**
-
----
-
-## 📚 Additional Resources
-
-- Oracle JDBC Documentation
-- Java SQL API Reference
-- OWASP SQL Injection Prevention Cheat Sheet
-- Database-specific JDBC drivers documentation
-
----
-
 **Happy Learning! 🎓**
 
 **Remember: PreparedStatement = Security + Performance + Best Practice** 🚀
